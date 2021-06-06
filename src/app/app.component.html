@@ -1,0 +1,32 @@
+<h2 class="title">PERFECT SQUARE NUMBER</h2>
+
+<p class="check">Check Perfect Square</p>
+<input class="text"  type="text" [(ngModel)]="sumFirst" name="sumFirstValidation" #sumFirstValidation="ngModel" pattern="[-+]?[0-9]*[.,]?[0-9]+" minlength="1" >
+<button [disabled]="!sumFirstValidation.valid"  (click) = "sum()">=</button><b>{{sumResult}}</b>
+
+<div [hidden]="sumFirstValidation.valid || sumFirstValidation.pristine">
+  This number is invalid.</div>
+<p *ngIf="sumFirstValidation?.errors?.pattern" class="num">
+  Only number characters are allowed.</p>
+<p *ngIf="sumFirstValidation?.errors?.minlength" class="sum"> 
+  This entry must have at least one characters.</p> <br>
+
+
+<p class="enter">Enter Range</p>
+<input class="range" type="text" [(ngModel)]="subFirst" name="subFirstValidation" #subFirstValidation="ngModel" pattern="[-+]?[0-9]*[.,]?[0-9]+" minlength="1" > -
+<input class="range1" type="text" [(ngModel)]="subSecond" name="subSecondValidation" #subSecondValidation="ngModel" pattern="[-+]?[0-9]*[.,]?[0-9]+" minlength="1" >
+<button [disabled]="!subFirstValidation.valid || !subSecondValidation.valid"  (click) = "sub()">=</button><b>{{subResult}}</b>
+
+<div [hidden]="subFirstValidation.valid || subFirstValidation.pristine" class="err">
+  This number is invalid.</div>
+<p *ngIf="subFirstValidation?.errors?.pattern">
+  Only number characters are allowed.</p>
+<p *ngIf="subFirstValidation?.errors?.minlength">
+  This entry must have at least one characters.</p> <br>
+
+<div [hidden]="subSecondValidation.valid || subSecondValidation.pristine" class="err1">
+  This number is invalid.</div>
+<p *ngIf="subSecondValidation?.errors?.pattern">
+  Only number characters are allowed.</p>
+<p *ngIf="subSecondValidation?.errors?.minlength">
+  This entry must have at least one characters.</p> <br>

@@ -1,0 +1,36 @@
+p {
+  font-family: Lato;
+}
+
+.title {
+  color: red;
+}
+.check {
+  background-color: rosybrown;
+}
+.enter {
+  background-color: sandybrown;
+}
+.sum {
+  background-color: sienna;
+}
+.num {
+  background-color: springgreen;
+}
+.err {
+  background-color: violet;
+}
+.text {
+  background-color: blueviolet;
+}
+.range {
+  background-color: rgba(222, 184, 135, 0.76);
+}
+.range1 {
+  background-color: chocolate;
+  text-decoration: cornflowerblue;
+}
+.err1 {
+  background-color: cornflowerblue;
+  text-decoration: cyan;
+}
